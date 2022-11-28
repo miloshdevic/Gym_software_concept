@@ -1,0 +1,21 @@
+Hypothèses :
+
+- Certains cas d'utilisation sont généralisées :
+  exemple : un membre et un professionnel s'inscrivent de la même façon
+
+- Concernant les cas d'utilisation, l'identification sera appelé a chaque fois
+  que l'identité d'un client doit être verifiée avant d'entamer une activité
+
+- Dans la tâche des cas d'utilisation, le Répertoire des Services doit être appelé à 
+  chaque fois qu'on a besoin d'effectuer une activité en lien aux séances
+
+- On suppose que l'agent est disponible en tout temps
+
+- On suppose que le Centre de Données est tout le temps actif et disponible
+
+- On suppose que le Répertoire des Services n'est jamais vide, il y a toujours 
+  au moins un service offert ou une séance disponible
+
+
+
+

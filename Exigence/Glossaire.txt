@@ -1,0 +1,101 @@
+Tâche 1: Glossaire
+----------------------
+GYM :               Centre sportif consacré à l'exercice de musculation et d'endurance
+                    (synonyme de salle de musculation).
+
+Client:             Personne susceptible de prendre un abonnement quelconque du #GYM.
+                    Peut être soit un membre ou un professionnel.
+
+Membre:             Utilisateurs des activités du #GYM (par exemple: les équipements d'entraînement,
+                    participer à des cours donnés par un professionnel, etc)
+
+Professionnel:      Personne inscrite comme tel au #GYM et offrant des services d'activités
+                    physiques ou de santé.
+
+Agent :             Réceptionniste qui gère l'inscription à un abonnement ou service par le Centre
+                    de Données et qui gère l'accès au #GYM.
+
+Centre de Données : Serveur informatique contenant des informations personnelles des clients ainsi
+                    que leur numéro de membre. Cela contient également des informations liées aux
+                    activités et services offerts ainsi que toute la logique de fonctionnement du
+                    #GYM.
+
+Informations 
+personnelles:       Ensemble d'informations données par le client lors
+                    de son inscription au #GYM (par exemple: âge, courriel, adresse, etc).
+
+Répertoire 
+des services :      Registre permettant une consultation rapide de tous les services
+                    offerts au #GYM. Cela contient donc l'ensemble des services.
+
+Service:            Ensemble d'activités physiques ou de consultations liées à la 
+                    santé offerts par des experts du #GYM à des dates prédéterminées par eux. Les
+                    membres ont un accès illimité aux services.
+
+Séance:             Réunion des membres au #GYM où le service auquel ils se sont inscrits est
+                    donné pendant une certaine durée.
+
+Identifiant de
+service :           Identifiant à 7 chiffres unique d'un service fourni par #GYM.
+        
+Identifiant de
+client:             Identifiant à 9 chiffres unique donné à chaque membre ou 
+                    professionnel lors de son inscription ce qui permet de l'identifier 
+                    lors des futurs actions.
+
+Requête:            Permet l'accès à des informations à partir du Centre de Données, seul l'agent effectue
+                    cette opération.
+
+Réception:          Lieu où se trouve l'agent et effectue les inscriptions, annulations, mises à jour.
+
+---- Ajout des nouveaux termes----
+
+Compte:             Dossier contenant les informations personnelles du client enregistré dans le système central.
+
+Inscription:        Action nécessaire faite à la réception par l'agent avant d'assister un cours de sport ou obtenir un service d'un professionnel
+
+Confirmation 
+présence:           Action effectuée par l'agent lorsque le membre se présente à la réception montrant que le service a été fourni à l'avance
+
+Frais 
+d'adhésion:         Montant que le client doit payer lorsqu'il s'incrit à GYM
+
+Membre 
+suspendu:           Status d'un membre lorsqu'il n'a pas payé ses frais de membre pour au moins un mois 
+
+Application:        Synonyme pour logiciel 
+
+Procédure 
+comptable:          Tâche exécutée au Centre des Données permettant de produire 
+                    des fichiers de transfert électronique de fond (TEF) 
+
+Fichier de 
+transfert 
+électronique 
+de fond (TEF):      Fichier contenant les informations du professionnel, telles que 
+                    son nom, son numéro ainsi que le montant à lui remettre 
+                    pour les services qu'il a donné cette semaine
+
+Services 
+comptables:         Type de service qui s'occupe de tenir les comptes financières 
+                    des membres
+
+Organisation
+tierce:             Partie externe appelée à exécuter des services au nom 
+                    d'une organisation ou d'un établissement  
+
+Procédures 
+financières:        Tâche qui regroupe l'enregistrement des paiements 
+                    des frais d'adhésion, un status de suspension du compte du membre 
+                    lorsque ses frais sont en retard si les frais dus ont été payé ou si 
+                    les frais sont en retard 
+
+Frais de 
+membre:             Frais englobant les frais d'adhésion et les frais associés au service 
+                    qu'il a pris 
+
+Rapport:            Document contenant les comptes payables ainsi qu'une liste de tous 
+                    les professionnels qui doivent être payé cette semaine, le nombre de services fournis 
+                    pour chaque professionnel ainsi que la totalité de leur frais durant cette semaine. À 
+                    la fin de ce rapport, il devra avoir une indication du nombre total de professionnels qui 
+                    ont fourni des services cette semaine, le nombre total de services et le total des frais 

@@ -1,0 +1,867 @@
+<html>
+
+<head>
+    <title>IFT2255 DM3</title>
+    <style type="text/css">
+        table
+        {
+            border: outset 2px black;
+            border-collapse: collapse;
+        }
+        th
+        {
+            border-bottom: double 2px black;
+        }
+        td
+        {
+            border-bottom: solid 1px black;
+        }
+        .first_col
+        {
+            border-right: double 2px black;
+        }
+    </style>
+</head>
+
+<body>
+	
+    <h1 style="text-align: center;">
+        IFT 2255 - Devoir 3</h1>
+    <h2>
+        Information générale</h2>
+    <p>
+        <span style="font-weight: bold;">Nom: </span>Milosh Devic
+        <br />
+        <span style="font-weight: bold;">Matricule: </span>8232
+        <br />
+        <span style="font-weight: bold;">Courriel: </span>milosh.devic@umontreal.ca
+        <br />
+        <span style="font-weight: bold;">temps mis: </span> 35 heures
+    </p>
+    <p>
+        <span style="font-weight: bold;">Nom: </span>Karine Nguyen
+        <br />
+        <span style="font-weight: bold;">Matricule: </span>0036
+        <br />
+        <span style="font-weight: bold;">Courriel: </span>karine.nguyen.1@umontreal.ca 
+        <br />
+        <span style="font-weight: bold;">temps mis: </span> 35 heures
+    </p>
+    <p>
+        <span style="font-weight: bold;">Nom: </span>Raphaëlle Tihon
+        <br />
+        <span style="font-weight: bold;">Matricule: </span>5053
+        <br />
+        <span style="font-weight: bold;">Courriel: </span>raphaelle.3687@gmail.com
+        <br />
+        <span style="font-weight: bold;">temps mis: </span> 35 heures
+    </p>
+    <h2>
+        Distribution des tâches</h2>
+    <p>
+        <span style="font-weight: bold;">Soumetteur: </span> Milosh Devic
+    </p>
+    <table cellpadding="7px">
+        <thead>
+            <tr>
+                <th class="first_col">
+                    Tâche
+                </th>
+
+                <th>
+                    Milosh
+                </th>
+                <th>
+                    Karine
+                </th>
+                <th>
+                    Raphaëlle
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="first_col">
+                    Mise à jour de vos artéfacts
+                </td>
+                <td>
+                    33 %
+                </td>
+                <td>
+                    33 %
+                </td>
+                <td>
+                    33 %
+                </td>
+            </tr>
+            <tr>
+                <td class="first_col">
+                    Implémentation en Java
+                </td>
+                <td>
+                    33 %
+                </td>
+                <td>
+                    33 %
+                </td>
+                <td>
+                    33 %
+                </td>
+            </tr>
+            <tr>
+                <td class="first_col">
+                    Tests unitaires 
+                </td>
+                <td>
+                    33 %
+                </td>
+                <td>
+                    33 %
+                </td>
+                <td>
+                    33 %
+                </td>
+            </tr>
+            <tr>
+                <td class="first_col">
+                    Livraison et documentation
+                </td>
+                <td>
+                    33 %
+                </td>
+                <td>
+                    33 %
+                </td>
+                <td>
+                    33 %
+                </td>
+            </tr>
+            <tr>
+        </tbody>
+    </table>
+    <h2>
+        Hypothèses</h2>
+    <p>
+        Les hypothèses pour résoudre ce projet se trouve vers ce <a href="Hypotheses.txt">lien</a>
+    </p>
+    <h2>
+        Tâche 1: Mise à jour de vos artéfacts  </h2>
+
+    <h2>
+        Diagramme de cas d'utilisation UML</h2>
+    <img src=diagramme-CU.png width="500px" alt="diagramme CU">
+    <h2>
+        Cas d'utilisation</h2>
+
+        <h3>Cas d'utilisation 1: Ajouter un membre </h3>
+        <h3>But : </h3>
+        <p>Faire adhérer un nouveau membre au #GYM. </p>
+        <h3>Préconditions:</h3>
+        <p> Aucune </p>
+        <h3>Acteurs:</h3>
+		
+        <ul>
+            <li>Agent</li>
+            <li>Client</li>
+		</ul>
+		
+        <h3>Scénario principal:</h3>
+		
+        <ol>
+            <li>Client se présente devant l'agent à la réception</li>
+            <li>Agent lui demande son compte Facebook valide, son courriel</li>
+            <li>Agent récolte les informations personnelles nécéssaires (nom, email, adresse, téléphone) du membre</li>
+            <li>Agent entre les données dans le centre de données</li>
+			<li>Validation les informations du client</li>
+            <li>Agent enregistre les données dans le Centre de Données</li>
+            <li>Le compte du membre est ajouté dans la liste contenant les comptes des autres membres</li>
+            <li>Client paye ses frais d'adhésion</li>
+            <li>Agent remet un numéro de membre unique à neuf chiffres au client</li>
+            <li>Client peut télécharger l'application #GYM sur son appareil mobile et se loguer avec son compte Facebook</li>
+        </ol>
+
+        <h3>Scénarios alternatifs: </h3>
+		
+        <p>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2a. Compte Facebook invalide <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2a.1 Client se crée un compte Facebook valide<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2a.2 Retour à l'étape 2 <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5a. Informations invalides <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5a.1 Retour à l'étape 3 <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8a. Membre décide de ne pas payer les frais <br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8a.1 Retour à l'étape 1
+		</p>
+
+        <h3>Postconditions:</h3>
+		
+        <p> Le compte du membre est créé. </p>
+
+
+        <h3>Cas d'utilisation 2: Création d'un service </h3>
+        
+		<h3>But : </h3>
+        
+		<p> Créer un nouveau service pour un professionnel. </p>
+        
+		<h3>Préconditions:</h3>
+        
+		<ul>
+            <li>Le professionnel est client</li>
+            <li>Centre de données actif</li>
+            <li>Répertoire des Service actif</li>
+            <li>Agent disponible</li>
+        </ul>
+        
+		<h3>Acteurs:</h3>
+        
+		<ul>
+            <li>Agent</li>
+            <li>Professionnel</li>
+        </ul>
+		
+        <h3>Scénario principal:</h3>
+        
+		<ol>
+            <li>Professionnel se présente à la réception</li>
+            <li>Appel 'identification du client'</li>
+            <li>Identité validée</li>
+            <li>Professionnel donne les informations nécessaires</li>
+			<li>Agent entre la date et heure actuelles, la date de début et fin du service, l'heure du service, la récurrence 
+                hebdomadaire du service, la capacité maximale, le numéro du professionnel, le code de la séance et des 
+                commentaires</li>
+			<li>Validation des informations</li>
+            <li>Agent enregistre les informations </li>
+            <li>Numéro de service généré </li>
+            <li>Un enregistrement contenant les informations pertinentes du service a été créé dans le Centre de Données</li>
+        </ol>
+
+        <h3>Scénarios alternatifs: </h3>
+        
+		<p>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3a. Identité invalide <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3a.1 Appel "Inscription"<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3a.2 Retour à l'étape 2<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6a Informations invalides <br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6a.1 Retour à l'étape 4
+        </p>
+
+        <h3>Postconditions:</h3>
+        
+		<p> Le service est créé. </p>
+
+        <h3>Cas d'utilisation 3: Inscription à une séance </h3>
+        
+		<h3>But : </h3>
+        
+		<p>Inscrire un membre à une séance. </p>
+        
+		<h3>Préconditions:</h3>
+        
+		<ul>
+            <li>Centre de données actif</li>
+            <li>Répertoire des Services actif</li>
+            <li>Membre est un client</li>
+            <li>Client a l'application installée sur son appareil mobile</li>
+        </ul>
+
+        <h3>Acteurs:</h3>
+        
+		<ul>
+            <li>Application #GYM</li>
+            <li>Membre</li>
+        </ul>
+		
+        <h3>Scénario principal:</h3>
+        
+		<ol>
+            <li>Membre ouvre l'application mobile</li>
+            <li>Appel "identification du client"</li>
+            <li>Numéro de membre valide</li>
+            <li>Membre consulte le Répertoire des Services</li>
+            <li>Membre consulte l'ensemble des services offerts et les séances disponibles dans la même journée</li>
+            <li>Membre choisit une séance</li>
+            <li>Il reste de la place pour la séance</li>
+			<li>Agent inscrit le membre à la séance</li>
+            <li>Agent confirme l'inscription à la séance choisie</li>
+            <li>Le logiciel crée un enregistrement sur le disque</li>
+            <li>Agent remplit les champs nécessaires de l'enregistrement</li>
+            <li>L'application cherche le montant à payer pour ce service</li>
+            <li>L'application affiche le montant à payer à l'écran</li>
+            <li>Membre paye pour le service</li>
+        </ol>
+
+        <h3>Scénarios alternatifs:</h3>
+        
+		<p>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3a. Identité invalide <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3a.1. Appel "Inscription"<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3a.2 Retour à l'étape 2 <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6a. Client n'est pas intéressé aux séances présentées<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6a.1 Client quitte<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;7a. Il ne reste plus de places pour la séance<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;7a.1 Retour à l'étape 4
+        </p>
+
+        <h3>Postconditions:</h3>
+        
+		<p> Membre est inscrit à une séance. </p>
+
+        <h3>Cas d'utilisation 4: Professionnel consulte ses séances </h3>
+        
+		<h3>But : </h3>
+        
+		<p>Informer le professionnel des inscriptions à ses séances.</p>
+        
+		<h3>Préconditions:</h3>
+        
+		<ul>
+            <li>Centre de données actif</li>
+            <li>Repertoire de service actif</li>
+            <li>Service existant</li>
+            <li>Professionnel est un client</li>
+            <li>Professionnel a l'application installée sur son appareil mobile</li>
+        </ul>
+
+        <h3>Acteurs:</h3>
+        
+		<ul>
+            <li>Application #GYM</li>
+            <li>Professionnel</li>
+        </ul>
+        
+		<h3>Scénario principal:</h3>
+        
+		<ol>
+            <li>Appel "identification d'un client"</li>
+            <li>Identité du professionnel valide</li>
+            <li>Professionnel envoie une requête au Centre de Données pour voir les inscriptions à ses séances</li>
+            <li>Le service existe</li>
+            <li>Centre de données affiche l'heure, la date et le nombre d'inscriptions de la séance</li>
+        </ol>
+
+        <h3>Scénarios alternatifs:</h3>
+        
+		<p>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2a. Identité invalide<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2a.1 Appel "Inscription"<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2a.2 Retour a l'étape 1<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4a. Le service est non existant<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4a.1 Appel "Création d'un service"<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4a.2 Retour a l'étape 3
+        </p>
+
+        <h3>Postconditions:</h3>
+        
+		<p>Le professionnel est informé de l'heure, la date et le nombre d'inscriptions de la séance.</p>
+
+        
+        <h3>Cas d'utilisation 5: Accès au centre </h3>
+        
+		<h3>But : </h3>
+        
+		<p>Permettre l'accès au centre au membre/professionnel.</p>
+        
+		<h3>Préconditions:</h3>
+        
+		<ul>
+            <li>Centre de données actif</li>
+            <li>Membre est un client</li>
+            <li>Professionnel est un client</li>
+            <li>Application #GYM fonctionne</li>
+            <li>Client a l'application installée sur son appareil mobile</li>
+        </ul>
+
+        <h3>Acteurs:</h3>
+        
+		<ul>
+            <li>Professionnel</li>
+            <li>Membre</li>
+            <li>Application mobile #GYM</li>
+        </ul>
+		
+        <h3>Scénario principal:</h3>
+        
+		<ol>
+            <li>Client se présente à la réception</li>
+            <li>Client se logue dans l'application mobile avec son compte Facebook</li>
+            <li>Appel "identification d'un client"</li>
+            <li>Le mot Validé apparait sur l'écran, l'identité du client est valide</li>
+            <li>Le nom et numéro de membre ainsi qu'un code QR représentant son numéro sont affichés sur l'écran de l'appareil mobile</li>
+            <li>Client scanne son code QR sur le lecteur de code QR placé aur le tourniquet</li>
+            <li>Les tourniquets sont débloqués pour laisser le client entrer</li>
+        </ol>
+
+        <h3>Scénarios alternatifs:</h3>
+        
+		<p>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3a. Numéro invalide <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3a.1 Appel à "inscription"<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3a.2 Retour à l'étape 2<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3b. Membre suspendu <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3b.1 Indique que le membre n'a pas payé ses frais pour au moins un mois<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3b.1.a Le status du membre a été suspendu <br>        
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3b.1.b Le membre paye ses frais <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3b.1.b.1 Retour à l'étape 3 <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3b.2 Membre quitte<br>
+        </p>
+
+        <h3>Postconditions:</h3>
+        
+		<p>Le client accède au #GYM.</p>
+        
+
+        <h3>Cas d'utilisation 6: Valider l'accès à un service </h3>
+        
+		<h3>But : </h3>
+        
+		<p>Permettre l'accès à un service pour un membre.</p>
+        
+		<h3>Préconditions:</h3>
+        
+		<ul>
+            <li>Centre de données actif</li>
+            <li>Répertoire des service actif</li>
+            <li>Membre est un membre </li>
+            <li>Professionnel est un client</li>
+            <li>Client a l'application installée sur son appareil mobile</li>
+        </ul>
+
+        <h3>Acteurs:</h3>
+        
+		<ul>
+            <li>Professionnel</li>
+            <li>Membre</li>
+            <li>Répertoire des Services</li>
+            <li>Application #GYM</li>
+        </ul>
+		
+        <h3>Scénario principal:</h3>
+        
+		<ol>
+            <li>Membre se présente a la réception</li>
+            <li>Appel "identification d'un client"</li>
+            <li>Numéro du membre valide</li>
+            <li>Membre présente son code QR au professionnel</li>
+            <li>Professionnel ouvre le Répertoire des Services</li>
+            <li>Il cherche le code de service à 7 chiffres approprié pour identifier le service à fournir</li>
+            <li>Une fois le code trouvé, le professionnel sélectionne la séance</li>
+            <li>Les informations nécessaires de la séance sont affichées</li>
+            <li>Professionnel sélectionne Comfirmer Inscriptions</li>
+            <li>Lecture du code QR du membre </li>
+            <li>Une requête est envoyé au Centre de Données pour vérifier la validité de l'inscription</li>
+            <li>Le mot Validé apparaît à l'écran, le client est inscrit</li>
+            <li>Logiciel crée un enregistrement sur le disque pour confirmer le service avant même qu'il soit donné</li>
+            <li>Membre a accès à la séance</li>
+        </ol>
+
+        <h3>Scénarios alternatifs:</h3>
+        
+		<p>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3a. Numéro invalide <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3a.1 Appel à "inscription"<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3a.2 Retour à l'étape 2 <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;11a. Le client n'est pas inscrit <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;12a.1 Appel "inscription à une séance"  <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;12a.2 Retour à l'étape 4
+        </p>
+
+        <h3>Postconditions:</h3>
+        
+		<p>le client accède à la séance.</p>
+
+        <h3>Cas d'utilisation 7: Identification d'un client </h3>
+        
+		<h3>But : </h3>
+        
+		<p>Valider l'identité d'un membre/professionnel.</p>
+        
+		<h3>Préconditions:</h3>
+        
+		<ul>
+            <li>Membre est un client</li>
+            <li>Professionnel est un client</li>
+            <li>Centre de données actif</li>
+            <li>Client a l'application installée sur son appareil mobile</li>
+        </ul>
+
+        <h3>Acteurs:</h3>
+        
+		<ul>
+            <li>Client</li>
+            <li>Application mobile #GYM</li>
+        </ul>
+		
+        <h3>Scénario principal:</h3>
+        
+		<ol>
+            <li>Client entre son compte Facebook dans l'application mobile</li>
+            <li>Application communique avec le Centre de Données</li>
+            <li>Le Centre de Données vérifie le numéro du client</li>
+            <li>Le Centre de Données valide le numéro du client</li>
+        </ol>
+
+        <h3>Scénarios alternatifs:</h3>
+        
+		<p>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4a. Numéro invalide <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4a.1 Appel "inscription"<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4a.2 Retour a l'étape 1<br>
+        </p>
+
+        <h3>Postconditions:</h3>
+        
+		<p>Le client est validé et a accès au #GYM.</p>
+
+        <h3>Cas d'utilisation 8: Consulter le Répertoire des Services </h3>
+        
+		<h3>But : </h3>
+        
+		<p>Consulter les services offerts.</p>
+        
+		<h3>Préconditions:</h3>
+        
+		<ul>
+            <li>Centre de données actif</li>
+            <li>Répertoire des services actif</li>
+            <li>Professionnel est un client</li>
+            <li>Membre est un client</li>
+            <li>Client a l'application installée sur son appareil mobile</li>
+        </ul>
+
+        <h3>Acteurs:</h3>
+		
+        <ul>
+            <li>Application #GYM</li>
+            <li>Client</li>
+            <li>Répertoire des Service</li>
+        </ul>
+		
+        <h3>Scénario principal:</h3>
+        
+		<ol>
+            <li>Appel "identification d'un client"</li>
+            <li>Numéro du membre ou du professionnel valide</li>
+            <li>Client consulte le Répertoire des Services </li>
+        </ol>
+
+        <h3>Scénarios alternatifs:</h3>
+        
+		<p>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2a. Numéro invalide <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2a.1 Appel "inscription d'un client" <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2a.2 Retour à l'étape 1<br>
+        </p>
+
+        <h3>Postconditions:</h3>
+        
+        <p>Le client est informé sur le contenu du Répertoire des Services.</p>
+        
+        <h3>Cas d'utilisation 9: Update le status du membre</h3>
+        
+		<h3>But : </h3>
+        
+		<p>Permet de vérifier si le compte d'un membre est encore valide ou pas</p>
+        
+		<h3>Préconditions:</h3>
+        
+		<ul>
+            <li>Centre de données actif</li>
+            <li>Services comptables RnB disponible</li>
+        </ul>
+
+        <h3>Acteurs:</h3>
+        
+		<ul>
+            <li>Système informatique RnB</li>
+        </ul>
+		
+        <h3>Scénario principal:</h3>
+        
+		<ol>
+            <li>À chaque soir à 21h, le système informatique de RnB regroupe tous les comptes des membres du Gym du Centre des Données</li>
+            <li>Le système informatique prend un compte</li>
+            <li>Le compte du membre n'est pas suspendu</li>
+            <li>Le membre du compte a payé les frais d'adhésion</li>
+            <li>RnB passe au prochain compte pour faire la vérification</li>
+        </ol>
+
+        <h3>Scénarios alternatifs:</h3>
+        
+		<p>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3a. Le compte du membre est suspendu <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3a.1. Membre a payé ses frais dus<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3a.1.1 Le compte du membre a été rétabli <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3a.1.2 Retour à l'étape 5 <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3a.1a. Membre n'a pas payé ses frais dus <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3a.1a.1 Membre reste un membre suspendu <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3a.1a.2 Retour à l'étape 5 <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4a. Le membre n'a pas payé les frais d'adhésion <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4a.1 Le compte du membre est suspendu  <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4a.2 Retour à l'étape 5 <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5a. Le système ne voit plus de compte à identifier <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5a.1 La vérification des comptes est finie  <br>
+        </p>
+
+        <h3>Postconditions:</h3>
+        
+		<p>Les comptes des membres du GYM du système sont mis à jour.</p>
+
+        <h3>Cas d'utilisation 10: Procédure comptable </h3>
+
+        <h3>But : </h3>
+        
+		<p>Permettre une bonne gestion des procédures financières.</p>
+        
+		<h3>Préconditions:</h3>
+        
+		<ul>
+            <li>Centre de données actif</li>
+            <li>On a accès aux informations des services rendus cette semaine</li>
+        </ul>
+
+        <h3>Acteurs:</h3>
+        
+		<ul>
+            <li>Gérant</li>
+        </ul>
+		
+        <h3>Scénario principal:</h3>
+        
+		<ol>
+            <li>À chaque vendredi, à minuit, les informations dans le Centre des Données sont accédées</li> 
+            <li>La procédure comptable accède aux informations des professionnel ayant fourni leur service cette semaine </li>
+            <li>La procédure comptable calcule le montant à transférer au professionnel pour ces services de la semaine</li>
+            <li>La procédure transforme ses enregistrement sous forme de données de transfert électronique de fond (TEF) contenant le nom, le numéro du professionnel ainsi que le montant à lui transférer</li>
+            <li>Suite à la création des TEF, la procédure comptable accède aux informations des membres ayant suivi un service cette semaine-là</li>
+            <li>La procédure génère une liste contenant tous les services qui les ont été fournises de manière chronologique</li>
+            <li>Procédure génère une facture contenant les informations du membre ainsi que les informations sur les service fournis qui sera disponible sur l'application</li>
+            <li>Procédure génère un avis de paiement pour les professionnels contenant la liste des services qu'il a fourni, les informations du professionnel, le nombre de 
+                consultations avec les membres et le total des frais pour cette semaine</li>
+            <li>La procédure produit un rapport de synthèse</li>
+            <li>La procédure lit le fichier des services fournis de la semaine</li>
+            <li>La procédure cherche les comptes payables des professionnels et créé une liste de tous ceux qui doivent être payés à la semaine donnée, le nombre de service de chacun et le total de leur frais pour cette semaine </li>
+            <li>Le rapport est envoyé au gérant de manière automatique ou par la demande du gérant à n'importe quel moment de la semaine</li>
+            <li>Un rapport est créé à partir des information mentionnées ci-haut </li>
+            <li>Le rapport est envoyé au gérant </li>
+        </ol>
+
+        <h3>Scénarios alternatifs:</h3>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;9a. Le gérant demande un rapport à un moment de la semaine autre que vendredi à minuit <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;9a.1. Les informations dans le Centre des Données sont accédées au moment où le gérant a besoin du rapport<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;9a.2. Retour à l'étape 2<br>
+        
+
+        <h3>Postconditions:</h3>
+        
+        <p>Un fichier TEF, les factures, les avis de paiement et un rapport de synthèse sont générés et envoyés au gérant (TEF et rapports), aux membres (factures) et aux professionels (avis de paiement).</p>
+        
+        <h3>Cas d'utilisation 11: Ajouter un professionnel </h3>
+        <h3>But : </h3>
+        <p>Créer un nouveau compte pour un professionnel au #GYM. </p>
+        <h3>Préconditions:</h3>
+        <p> Aucune </p>
+        <h3>Acteurs:</h3>
+		
+        <ul>
+            <li>Agent</li>
+            <li>Professionnel</li>
+		</ul>
+		
+        <h3>Scénario principal:</h3>
+		
+        <ol>
+            <li>Professionnel se présente devant l'agent à la réception</li>
+            <li>Agent lui demande son compte Facebook valide, son courriel</li>
+            <li>Agent récolte les informations personnelles nécéssaires (nom, email, adresse, téléphone) du professionnel </li>
+            <li>Agent entre les données dans le centre de données</li>
+			<li>Validation des informations du professionnel</li>
+            <li>Agent enregistre les données dans le Centre de Données</li>
+            <li>Le compte du professionnel est ajouté dans la liste contenant les comptes des autres professionnel</li>
+            <li>Client paye ses frais d'adhésion</li>
+            <li>Agent remet un numéro unique à 9 chiffres au professionnel</li>
+            <li>Client peut télécharger l'application #GYM sur son appareil mobile et se loguer avec son compte Facebook</li>
+        </ol>
+
+        <h3>Scénarios alternatifs: </h3>
+		
+        <p>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2a. Compte Facebook invalide <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2a.1 Client se crée un compte Facebook valide<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2a.2 Retour à l'étape 2<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5a. Informations invalides <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5a.1 Retour à l'étape 3 <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8a. Client décide de ne pas payer les frais <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8a.1 Retour à l'étape 1 <br>
+        </p>
+
+        <h3>Postconditions:</h3>
+		
+        <p> Le compte du professionnel est créé. </p>
+
+    <h2>Diagramme d'activité UML</h2>
+    
+	<p>
+        À noter, la construction des diagrammes d'activité des cas 
+        d'utilisation voulus a été entre autre basé sur les conventions
+        présentées <br> sur le site de Visual Paradigm, disponible en cliquant sur ce 
+        <a href=https://www.visual-paradigm.com/VPGallery/diagrams/Activity.html>lien</a>.
+    </p>
+    
+	<p>Un diagramme d'activité principale servant comme point d'entrée :</p>
+    
+	<img src="diagramme-ACT-principale.png" width="500px" 
+    alt="Un diagramme d'activité principale servant comme point d'entrée">
+    
+	<p>Un diagramme d'activité pour l'inscription à une séance:</p>
+    
+	<img src="diagramme-ACT-inscription.png" width="500px" 
+    alt="Un diagramme d'activité pour l'inscription à une séance"> 
+    
+	<p>Un diagramme d'activité pour confirmer une séance:</p>
+    
+	<img src="diagramme-ACT-confirmation.png" width="500px" 
+    alt="Un diagramme d'activité pour confirmer une séance"> 
+    
+	<p>Un diagramme d'activité pour ajouter/mettre à jour/supprimer un membre:</p>
+    
+	<img src="diagramme-ACT-client.png" width="500px" 
+    alt="Un diagramme d'activité pour ajouter/mettre à jour/supprimer un membre"> 
+    
+	<p>Un diagramme d'activité pour ajouter/mettre à jour/supprimer un service:</p>
+    
+	<img src="diagramme-ACT-service.png" width="500px" 
+    alt="Un diagramme d'activité pour ajouter/mettre à jour/supprimer un service"> 
+
+    <p>Un diagramme d'activité pour faire la mise à jour du status du membre</p>
+	<img src="diagramme-ACT-update.png" width="500px" 
+    alt="Un diagramme d'activité pour faire la mise à jour du status du membre"> 
+
+    <p>Un diagramme d'activité pour la procédure comptable</p>
+    <img src="diagramme-ACT-procedeComptable.png" width="500px" 
+    alt="Un diagramme d'activité pour la procédure comptable"> 
+
+    <h2>Diagramme de classe UML</h2>
+
+    <p>L'image ci-dessous représente une vue d'ensemble du diagramme de classe.
+        Nous avons opté pour une architecture MVC étant donné que cette 
+        architecture est adéquate pour les logiciels interactifs, des logiciels 
+        de type usager-interface. De plus, il a été dit en cours qu'on 
+        s'intéressera à cette architecture pour le projet </p>
+    <img src="diagramme-CLASSE-overview.png" width="700px" 
+    alt="Une vue d'ensemble du diagramme de classe">
+
+    <h2>Diagramme de séquence UML</h2>
+    
+    <p>Diagramme de séquence de la gestion des membres</p>
+    <img src="diagramme-SEQ-gestionMembre.png" width="500px" 
+    alt="diagramme de séquence Gestion Membre">
+
+    <p>Diagramme de séquence de la gestion des services</p>
+    <img src="diagramme-SEQ-gestionService.png" width="500px" 
+    alt="diagramme de séquence Gestion Service">
+
+    <p>Diagramme de séquence d'inscription à une séance</p>
+    <img src="diagramme-SEQ-inscriptionSeance.png" width="500px" 
+    alt="diagramme de séquece Inscription Séance">
+
+    <p>Diagramme de séquence pour confirmer la présence</p>
+    <img src="diagramme-SEQ-confirmerPresence.png" width="500px" 
+    alt="diagramme de séquece Confirmer Présence">
+
+    <p>Diagramme de séquence du procédure comptable</p>
+    <img src="diagramme-SEQ-procedureComptable.png" width="500px" 
+    alt="diagramme de séquence Procédure Comptable">
+
+    <h2>Tâche 2: Implémentation en Java </h2> 
+
+    <p>Voir fichier Java</p>
+
+    <!-- <p>Dans notre prototype Java, on a crée un aperçu de ce que notre logiciel devrait ressembler, on offre une vision à l'utilisateur. 
+        Dans notre prototype, on a "hard code" des exemples de membres, de professionnels ainsi que de services pour montrer le fonctionnement 
+        des nos méthodes, le déroulement de notre logiciel. Dans le cas des membres, des professionels et des services, il est possible d'effectuer 
+        le retrait, la mise à jour d'un compte ou d'un service, grâce aux exemples que nous avions "hard code", et le création d'un compte ou 
+        d'un service à partir de la ligne de commande. <br><br> Voici un exemple de membre, de professionnel et de deux services fournis qu'on mis: 
+
+        Informations du membre: <br>
+        1) Nom complet: Connor McGregor <br>
+        2) Adresse: 123 idk <br>
+        3) Email: cmg.notorious@ufc.com <br>
+        4) Numéro de téléphone: 11 321 4563 <br>
+        5) Numéro du membre: 123456789 <br><br>
+
+        Informations du service: <br>
+        1) Nom du service: yoga <br>
+        2) Date de début: 08-10-1993 <br>
+        3) Date de fin: 28-10-1993 <br>
+        4) Heure du service: 15:00 <br>
+        5) Description (facultatif): <br>
+        6) Service hebdomadaire: lundi <br>
+        7) Capacité maximale: 5 <br>
+        8) ID du professionel en charge : 123456789 <br> 
+        9) Frais du service: 31.0 <br>
+        10) Numéro du service: 1234567 <br><br>
+
+        Informations du service: <br>
+        1) Nom du service: massothérapie <br>
+        2) Date de début: 08-10-1993 <br>
+        3) Date de fin: 28-10-1993 <br>
+        4) Heure du service: 15:00 <br>
+        5) Description (facultatif): <br>
+        6) Service hebdomadaire: lundi <br>
+        7) Capacité maximale: 50 <br>
+        8) ID du professionel en charge : 987654321 <br>
+        9) Frais du service: 91.0 <br>
+        10) Numéro du service: 7654321<br><br>
+
+        Informations du professionnel: <br>
+        1) Nom complet: Novak Djokovic <br>
+        2) Adresse: 221B Baker Street <br>
+        3) Email: nole.djoko@thebest.rs <br>
+        4) Numéro de téléphone: 06 42342 5432 <br>
+        5) Domaine(s) d'expertise(s): [tennis, condition] <br>
+        6) Numéro du professionnel: 987654321 <br><br>
+
+        
+        Concernant l'inscription pour une séance, on fait un exemple pour deux cas: le cas où l'inscription est valide et l'inscription est invalide étant donné qu'on dépasse 
+        la capacité maximale du service. Dans cet exemple, on utilise 2 services fournis. Le service fourni Yoga aura atteint la capacité maximale, donc aucune inscription n'est valide pour ce service, 
+        et le service fourni Massothérapie n'aurait pas encore attent la capacité maximale. <br><br>
+
+        Dans notre logiciel, on peut identifier le client à deux moments. Le premier moment étant suite à la création du client, on retourne à la page principale 
+        du logiciel et on sélectionne l'option d'identifier le client. Si le numéro de client entré correspondant au numéro fourni lorsque le compte a été crée, cela 
+        affichera que l'identification est valide. Le deuxième moment étant de sélectionner l'option Identifier le Client en utilisant un identifiant qui a été "hard code". 
+        Il est à noter que lorsqu'on parle de "Client", on y fait référance aux membres et aux professionels de GYM.  
+        <br><br>
+
+        Pour confirmer la présence d'un membre pour une séance, on suppose que le membre qui souhaite confirmer sa présence à l'avance possède un numéro de membre "123456789". Il est à 
+        noter que tout autre numéro de membre ne sera pas en mesure d'effectuer cette action.
+        <br><br>
+
+        Les classes Inscription et Séance dans notre prototype ne sont pas pertinentes pour cette itération du projet étant donné qu'une grande partie de notre code est "hard code". 
+        Ses classes seront utilisées pour le DM3, elles seront élaborées d'avantage durant la prochaine itération.
+    </p> -->
+    
+    <h2>Tâche 3: Tests Unitaires</h2>
+
+    <p>Voir les fichiers Java dans le dossier Test</p>
+
+    <h2>Tâche 4: Livraison et documentation</h2>
+
+    <p>Consultez les fichiers dans les dossiers Implémentation et Documentation</p>
+    
+    <h2>Collaboration</h2>
+    
+    <p> À noter, lorsqu'on travaillait sur le projet, tous les membres de l'équipe étaient présents</p>
+    <p>Statisque des Commits sur l'ensemble de l'équipe et de manière individuelle</p>
+
+    <img src="stats-commit-dm2png.png" width="500px" alt="stats commit équipe et individuel">
+
+    <p>Statisque des Additions sur l'ensemble de l'équipe et de manière individuelle</p>
+    <img src="stats-add-dm2.png" width="500px" alt="stats add équipe et individuel">
+
+    <p>Statisque des Deletions sur l'ensemble de l'équipe et de manière individuelle</p>
+    <img src="stats-delete-dm2.png" width="500px" alt="stats delete équipe et individuel">
+
+</body>
+
+</html>
+

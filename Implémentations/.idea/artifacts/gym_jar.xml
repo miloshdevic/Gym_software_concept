@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="gym:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/gym_jar</output-path>
+    <root id="archive" name="Implémentations.jar">
+      <element id="module-output" name="Implémentations" />
+    </root>
+  </artifact>
+</component>
